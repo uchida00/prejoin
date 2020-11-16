@@ -1,0 +1,27 @@
+<center>
+
+<p id="RealtimeClockArea2">※ここに時計が表示されます。</p>
+<script>
+function set2fig(num) {
+   var ret;
+   if( num < 10 ) { ret = "0" + num; }
+   else { ret = num; }
+   return ret;
+}
+function showClock2() {
+   var nowTime = new Date();
+   var nowHour = set2fig( nowTime.getHours() );
+   var nowMin  = set2fig( nowTime.getMinutes() );
+   var msg = "現在時刻は、" + nowHour + ":" + nowMin + " です。";
+   document.getElementById("RealtimeClockArea2").innerHTML = msg;
+}
+setInterval('showClock2()',1000);
+</script>
+
+従業員名
+<input>
+
+<div>
+<button>出勤</button>　<button>退勤</button>
+</div>
+</center>
